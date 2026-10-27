@@ -6,66 +6,132 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Final Expense Coverage Options | All American Coverage</title>
 <meta name="description" content="Answer 4 quick questions and a licensed insurance agent will call to go over final expense coverage options available in your state.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#ffffff; --fg:#1a1a1a; --muted:#555; --line:#e5e5e5; --accent:#1b2a49; --cta:#c9a227; --cta-fg:#1a1a1a; --card:#f7f7f4; --ok:#1f7a3a; --err:#b3261e; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121212; --fg:#f2f2f2; --muted:#b5b5b5; --line:#2a2a2a; --accent:#c9a227; --card:#1c1c1c; } }
-  :root[data-theme="dark"] { --bg:#121212; --fg:#f2f2f2; --muted:#b5b5b5; --line:#2a2a2a; --accent:#c9a227; --card:#1c1c1c; }
+  :root {
+    --bg:#ffffff; --surface:#f5f5f7; --fg:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7; --line-soft:#e8e8ed;
+    --accent:#1d1d1f; --accent-fg:#ffffff; --blue:#0071e3; --ok:#1d8a3b; --err:#d70015;
+    --radius:18px; --radius-sm:12px;
+    --shadow:0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.04), 0 24px 48px rgba(0,0,0,.10);
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#000000; --surface:#1c1c1e; --fg:#f5f5f7; --muted:#a1a1a6; --line:#3a3a3c; --line-soft:#2c2c2e; --accent:#f5f5f7; --accent-fg:#000000; --blue:#2997ff; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.5); --shadow-lg:0 2px 4px rgba(0,0,0,.4), 0 24px 48px rgba(0,0,0,.6); } }
+  :root[data-theme="dark"] { --bg:#000000; --surface:#1c1c1e; --fg:#f5f5f7; --muted:#a1a1a6; --line:#3a3a3c; --line-soft:#2c2c2e; --accent:#f5f5f7; --accent-fg:#000000; --blue:#2997ff; }
+
   * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:20px/1.55 Georgia, "Times New Roman", serif; }
-  header { border-bottom:1px solid var(--line); }
-  .wrap { max-width:640px; margin:0 auto; padding:0 16px; }
-  header .wrap { padding:16px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
-  .brand { font-weight:700; color:var(--accent); text-decoration:none; font-size:20px; }
-  .callnow { display:none; color:var(--accent); text-decoration:none; font-size:17px; font-weight:700; }
-  h1 { font-size:30px; line-height:1.2; margin:28px 0 10px; }
-  .lede { margin:0 0 20px; color:var(--muted); font-size:19px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 16px 24px; margin-bottom:18px; }
-  .progress { font-size:15px; color:var(--muted); margin:0 0 6px; }
-  .bar { height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-bottom:18px; }
-  .bar i { display:block; height:100%; width:20%; background:var(--accent); transition:width .25s; }
-  .q { font-size:24px; font-weight:700; line-height:1.25; margin:0 0 14px; }
-  .opts { display:grid; gap:10px; }
-  .opt { display:block; width:100%; min-height:56px; padding:14px 16px; font:inherit; font-size:20px; text-align:left; background:var(--bg); color:var(--fg); border:2px solid var(--line); border-radius:12px; cursor:pointer; }
-  .opt:hover, .opt:focus { border-color:var(--accent); outline:none; }
-  .opt.selected { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent) inset; }
-  label.f { display:block; font-size:17px; font-weight:700; margin:14px 0 6px; }
-  label.f small { font-weight:400; color:var(--muted); }
-  input[type=text], input[type=tel], input[type=email], select { width:100%; min-height:54px; padding:12px 14px; font:inherit; font-size:20px; color:var(--fg); background:var(--bg); border:2px solid var(--line); border-radius:12px; }
-  input:focus, select:focus { border-color:var(--accent); outline:none; }
-  .err { color:var(--err); font-size:16px; margin:6px 0 0; display:none; }
-  .consent { font-size:14px; line-height:1.5; color:var(--muted); margin:18px 0 12px; }
-  .cta { display:block; width:100%; min-height:60px; padding:14px 16px; font:inherit; font-size:22px; font-weight:700; background:var(--cta); color:var(--cta-fg); border:0; border-radius:12px; cursor:pointer; }
-  .cta[disabled] { opacity:.6; cursor:default; }
-  .back { background:none; border:0; color:var(--muted); font:inherit; font-size:16px; padding:12px 0 0; cursor:pointer; text-decoration:underline; }
-  .trust { font-size:15px; color:var(--muted); margin:0 0 20px; }
-  .trust span { display:inline-block; margin-right:14px; }
+  html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.5 "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; letter-spacing:-0.01em; }
+  a { color:var(--blue); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  header { position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 72%, transparent); -webkit-backdrop-filter:saturate(180%) blur(20px); backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line-soft); }
+  header .wrap { display:flex; justify-content:space-between; align-items:center; height:52px; padding:0 20px; }
+  .brand { display:flex; align-items:center; gap:9px; color:var(--fg); font-weight:600; font-size:15px; letter-spacing:-0.02em; text-decoration:none; }
+  .brand:hover { text-decoration:none; }
+  .brand svg { width:22px; height:22px; }
+  .callnow { display:none; color:var(--blue); font-size:15px; font-weight:500; }
+
+  .wrap { max-width:600px; margin:0 auto; padding:0 20px; }
+
+  .hero { padding:56px 0 28px; text-align:center; }
+  .eyebrow { display:inline-block; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 14px; }
+  h1 { font-size:40px; line-height:1.08; font-weight:700; letter-spacing:-0.03em; margin:0 0 14px; }
+  .lede { margin:0 auto; max-width:460px; color:var(--muted); font-size:19px; line-height:1.45; letter-spacing:-0.015em; }
+
+  .card { background:var(--bg); border:1px solid var(--line-soft); border-radius:var(--radius); padding:28px 24px 26px; margin:28px 0 18px; box-shadow:var(--shadow-lg); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card { background:var(--surface); border-color:var(--line-soft); } }
+  :root[data-theme="dark"] .card { background:var(--surface); }
+
+  .meta { display:flex; justify-content:space-between; align-items:center; margin:0 0 10px; }
+  .progress { font-size:13px; font-weight:500; color:var(--muted); margin:0; letter-spacing:.01em; }
+  .bar { height:4px; background:var(--line-soft); border-radius:2px; overflow:hidden; margin-bottom:24px; }
+  .bar i { display:block; height:100%; width:20%; background:var(--fg); border-radius:2px; transition:width .45s cubic-bezier(.4,0,.2,1); }
+
   .step { display:none; }
-  .step.active { display:block; }
-  .thanks h2 { font-size:28px; margin:0 0 10px; color:var(--ok); }
-  .thanks p { margin:0 0 12px; }
-  .thanks .cta { margin-top:10px; text-align:center; text-decoration:none; line-height:1.4; }
+  .step.active { display:block; animation:rise .38s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { .step.active { animation:none; } .bar i { transition:none; } }
+
+  .q { font-size:24px; font-weight:600; line-height:1.2; letter-spacing:-0.025em; margin:0 0 20px; }
+  .opts { display:grid; gap:10px; }
+  .opt { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:58px; padding:15px 18px; font:inherit; font-size:18px; font-weight:500; text-align:left; background:var(--surface); color:var(--fg); border:1.5px solid transparent; border-radius:var(--radius-sm); cursor:pointer; transition:background .18s, border-color .18s, transform .12s; -webkit-tap-highlight-color:transparent; }
+  .opt::after { content:""; width:9px; height:9px; border-right:2px solid var(--muted); border-bottom:2px solid var(--muted); transform:rotate(-45deg); opacity:.55; transition:opacity .18s, transform .18s; }
+  .opt:hover { border-color:var(--line); }
+  .opt:hover::after { opacity:1; transform:translateX(2px) rotate(-45deg); }
+  .opt:focus-visible { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px color-mix(in srgb, var(--blue) 22%, transparent); }
+  .opt:active { transform:scale(.985); }
+  .opt.selected { background:var(--accent); color:var(--accent-fg); border-color:var(--accent); }
+  .opt.selected::after { border-color:var(--accent-fg); opacity:1; }
+
+  label.f { display:block; font-size:13px; font-weight:600; letter-spacing:.01em; color:var(--muted); margin:16px 0 6px; }
+  label.f small { font-weight:500; }
+  input[type=text], input[type=tel], input[type=email], select { width:100%; min-height:52px; padding:12px 16px; font:inherit; font-size:17px; color:var(--fg); background:var(--surface); border:1.5px solid transparent; border-radius:var(--radius-sm); transition:border-color .18s, background .18s, box-shadow .18s; -webkit-appearance:none; appearance:none; }
+  select { background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236e6e73' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat:no-repeat; background-position:right 16px center; padding-right:40px; }
+  input:focus, select:focus { outline:none; background:var(--bg); border-color:var(--blue); box-shadow:0 0 0 4px color-mix(in srgb, var(--blue) 18%, transparent); }
+  input::placeholder { color:#b0b0b5; }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .row2 label.f { margin-top:0; }
+  .err { color:var(--err); font-size:14px; font-weight:500; margin:8px 0 0; display:none; }
+
+  .consent { font-size:12.5px; line-height:1.5; color:var(--muted); margin:20px 0 14px; letter-spacing:0; }
+  .cta { display:block; width:100%; min-height:56px; padding:15px 20px; font:inherit; font-size:17px; font-weight:600; letter-spacing:-0.01em; background:var(--blue); color:#fff; border:0; border-radius:980px; cursor:pointer; transition:transform .12s, filter .18s, opacity .18s; }
+  .cta:hover { filter:brightness(1.07); text-decoration:none; }
+  .cta:active { transform:scale(.985); }
+  .cta[disabled] { opacity:.55; cursor:default; }
+  .back { display:inline-flex; align-items:center; gap:6px; background:none; border:0; color:var(--muted); font:inherit; font-size:14px; font-weight:500; padding:18px 0 0; cursor:pointer; }
+  .back::before { content:""; width:7px; height:7px; border-left:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); }
+  .back:hover { color:var(--fg); }
+
+  .trust { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:26px 0 8px; padding:0; list-style:none; }
+  .trust li { display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; font-size:13px; line-height:1.35; color:var(--muted); }
+  .trust svg { width:22px; height:22px; stroke:var(--fg); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+  @media (max-width:420px) { .trust { grid-template-columns:1fr; gap:10px; } .trust li { flex-direction:row; text-align:left; } }
+
+  .thanks { padding:72px 0 40px; text-align:center; }
+  .thanks .check { width:64px; height:64px; margin:0 auto 22px; border-radius:50%; background:var(--ok); display:flex; align-items:center; justify-content:center; animation:pop .5s cubic-bezier(.2,.9,.3,1.3) both; }
+  .thanks .check svg { width:30px; height:30px; stroke:#fff; fill:none; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+  @keyframes pop { from { transform:scale(.6); opacity:0; } to { transform:none; opacity:1; } }
+  .thanks h2 { font-size:32px; font-weight:700; letter-spacing:-0.03em; line-height:1.1; margin:0 0 12px; }
+  .thanks p { max-width:440px; margin:0 auto 12px; color:var(--muted); font-size:17px; }
+  .thanks .cta { max-width:320px; margin:22px auto 0; text-align:center; line-height:1.5; }
+
   .hp { position:absolute; left:-9999px; top:-9999px; height:0; width:0; opacity:0; }
-  footer { border-top:1px solid var(--line); margin-top:32px; }
-  footer .wrap { padding:18px 16px; color:var(--muted); font-size:14px; line-height:1.5; }
-  a { color:var(--accent); }
+  footer { border-top:1px solid var(--line-soft); margin-top:48px; background:var(--surface); }
+  footer .wrap { padding:22px 20px 32px; color:var(--muted); font-size:12px; line-height:1.55; }
+  footer a { color:var(--muted); text-decoration:underline; }
+
+  @media (max-width:480px) {
+    .hero { padding:40px 0 20px; }
+    h1 { font-size:32px; }
+    .lede { font-size:17px; }
+    .card { padding:22px 18px 22px; border-radius:16px; }
+    .q { font-size:22px; }
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="../">All American Coverage</a>
+    <a class="brand" href="../" aria-label="All American Coverage home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4 6v5.5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3.5Z" fill="currentColor" opacity=".12"/><path d="M12 2.5 4 6v5.5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.8 12.2 2.2 2.2 4.3-4.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>All American Coverage</span>
+    </a>
     <a class="callnow" id="callnow-top" href="#">Call now</a>
   </div>
 </header>
 
 <main class="wrap">
   <div id="form-view">
-    <h1>Final expense coverage for ages 50 to 85.</h1>
-    <p class="lede">Answer 4 quick questions. A licensed insurance agent will call to go over the options available in your state. No cost to talk, no obligation.</p>
+    <section class="hero">
+      <p class="eyebrow">Final expense coverage · Ages 50 to 85</p>
+      <h1>Peace of mind for the people you love.</h1>
+      <p class="lede">Four quick questions. A licensed agent calls to walk you through the options in your state. No cost to talk, no obligation.</p>
+    </section>
 
     <div class="card">
-      <p class="progress" id="progress">Question 1 of 4</p>
+      <div class="meta"><p class="progress" id="progress">Question 1 of 4</p><p class="progress">About 1 minute</p></div>
       <div class="bar"><i id="bar"></i></div>
 
       <form id="lead-form" novalidate>
@@ -120,18 +186,23 @@
         <div class="step" data-step="5">
           <p class="q">Where should the agent reach you?</p>
 
-          <label class="f" for="first_name">First name</label>
-          <input type="text" id="first_name" name="first_name" autocomplete="given-name" required>
-
-          <label class="f" for="last_name">Last name</label>
-          <input type="text" id="last_name" name="last_name" autocomplete="family-name" required>
+          <div class="row2">
+            <div>
+              <label class="f" for="first_name">First name</label>
+              <input type="text" id="first_name" name="first_name" autocomplete="given-name" placeholder="Jane" required>
+            </div>
+            <div>
+              <label class="f" for="last_name">Last name</label>
+              <input type="text" id="last_name" name="last_name" autocomplete="family-name" placeholder="Smith" required>
+            </div>
+          </div>
 
           <label class="f" for="phone">Best phone number to reach you</label>
           <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555" required>
           <p class="err" id="phone-err">Please enter a 10-digit U.S. phone number.</p>
 
           <label class="f" for="email">Email <small>(optional)</small></label>
-          <input type="email" id="email" name="email" inputmode="email" autocomplete="email">
+          <input type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
 
           <label class="f" for="state">State</label>
           <select id="state" name="state" required>
@@ -152,11 +223,16 @@
       </form>
     </div>
 
-    <p class="trust"><span>A licensed agent will contact you.</span> <span>Coverage subject to eligibility; rates vary by age, health and state.</span> <span>Not affiliated with any government agency.</span></p>
+    <ul class="trust">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>A licensed agent will contact you</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Coverage subject to eligibility; rates vary by age, health and state</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>Private. Not affiliated with any government agency</li>
+    </ul>
   </div>
 
   <div id="thanks-view" class="thanks" style="display:none">
-    <h2>You're all set. Expect a call soon.</h2>
+    <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
+    <h2>You're all set.</h2>
     <p>A licensed insurance agent will call you soon to go over your options. If you miss the call, they will try again, so keep an eye out for a new number.</p>
     <p>Have your current coverage details handy if you have any; it makes the call quicker.</p>
     <a class="cta" id="callnow-btn" href="#" style="display:none">Call now instead</a>

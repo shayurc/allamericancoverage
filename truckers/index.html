@@ -232,10 +232,9 @@
 
   <div id="thanks-view" class="thanks" style="display:none">
     <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
-    <h2>You're all set.</h2>
-    <p>A licensed insurance agent will call you soon to go over your options. If you miss the call, they will try again, so keep an eye out for a new number.</p>
-    <p>Have your current coverage details handy if you have any; it makes the call quicker.</p>
-    <a class="cta" id="callnow-btn" href="#" style="display:none">Call now instead</a>
+    <h2>Good news, you qualify.</h2>
+    <a class="cta" id="callnow-btn" href="#" style="display:none">Call (747) 352-8705</a>
+    <p style="margin-top:18px">Or a licensed agent will call you shortly.</p>
   </div>
 </main>
 
@@ -255,7 +254,7 @@ var CONFIG = {
   // Meta Pixel (dataset) ID from Events Manager. Empty = pixel off.
   metaPixelId: "942873531952028",
   // Optional "call now" number shown in the header and on the thank-you screen. Empty = hidden.
-  callNowNumber: "",
+  callNowNumber: "(747) 352-8705",
   // TrustedForm consent certificates (ActiveProspect account needed). false = off.
   trustedForm: false,
   segment: "truckers"
@@ -277,7 +276,7 @@ var CONFIG = {
   // Call-now links
   if (CONFIG.callNowNumber) {
     var tel = 'tel:' + CONFIG.callNowNumber.replace(/[^0-9+]/g, '');
-    ['callnow-top', 'callnow-btn'].forEach(function (id) {
+    ['callnow-btn'].forEach(function (id) { // header link stays hidden so visitors fill the form first
       var a = document.getElementById(id); a.href = tel; a.style.display = 'block';
       if (id === 'callnow-top') { a.textContent = 'Call ' + CONFIG.callNowNumber; a.style.display = 'inline'; }
     });
